@@ -1,0 +1,138 @@
+:root {
+  --link-color: hsl(0, 54%, 70%);
+  --link-hover: hsl(0, 54%, 84%);
+  --main-font: "Raleway", sans-serif;
+}
+
+/* fix jumping scrollbar */
+html {
+  margin-left: calc(100vw - 100%);
+}
+
+body {
+  /* font */
+  font-family: var(--main-font);
+  font-weight: 200;
+  font-size: 1.1rem;
+
+  /* layout */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+/* typewriter animation */
+span {
+  border-right: 0.28rem solid var(--link-hover);
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+em {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content {
+  /* spacing */
+  margin-top: 15vh;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 8vh;
+  width: 32rem;
+  line-height: 1.4rem;
+
+  /* layout */
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+article {
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+/* link styling */
+main a,
+section a {
+  color: var(--link-color);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+main a:hover,
+section a:hover {
+  text-decoration: underline;
+  transition-duration: 0.4s;
+}
+
+article a {
+  font-weight: 700;
+  color: var(--link-color);
+  margin-right: 10px;
+}
+
+article a:hover {
+  text-decoration: none;
+  color: var(--link-hover);
+  transition-duration: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.details-btn {
+  background-color: #fff;
+  border: none;
+  font-family: var(--main-font);
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 5px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+/* plus/minus symbol styling */
+.details-btn:after {
+  content: "\002B"; /* plus symbol */
+  color: black;
+  float: left;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.active:after {
+  content: "\2212"; /* minus symbol */
+}
+
+button:focus {
+  border-color: black;
+}
+
+.details-btn:hover {
+  background-color: var(--link-hover);
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.details {
+  font-size: 1.1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
