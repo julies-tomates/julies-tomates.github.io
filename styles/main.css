@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  background: hsl(36, 100%, 98%);
   /* font */
   font-family: var(--main-font);
   font-weight: 200;
@@ -95,7 +96,7 @@ article a:hover {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
 .details-btn {
-  background-color: #fff;
+  background-color: hsl(36, 100%, 98%);
   border: none;
   font-family: var(--main-font);
   font-size: 1.1rem;
