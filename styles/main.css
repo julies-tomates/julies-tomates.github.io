@@ -1,6 +1,8 @@
 :root {
   --link-color: hsl(0, 54%, 70%);
   --link-hover: hsl(0, 54%, 84%);
+  --green-accent: hsl(70, 36%, 33%);
+  --lightgreen-accent: hsl(69, 26%, 52%);
   --main-font: "Raleway", sans-serif;
 }
 
@@ -71,10 +73,9 @@ section a {
   text-decoration: none;
 }
 
-main a:hover,
-section a:hover {
+.home a:hover,
+.details a:hover {
   text-decoration: underline;
-  transition-duration: 0.4s;
 }
 
 article a {
@@ -136,8 +137,68 @@ button:focus {
   transition: max-height 0.2s ease-out;
 }
 
+/*Projects page*/
+
+.home-link {
+  color: var(--green-accent);
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: var(--lightgreen-accent);
+}
+
+.project-item {
+  display: inline-flex;
+
+  margin-bottom: 20px;
+}
+
+.item {
+  margin-right: 20px;
+}
+
+.project-item a {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.item h2 {
+  margin-bottom: 8px;
+  color: var(--link-color);
+}
+
+.item h2:hover {
+  text-decoration: none;
+  color: var(--lightgreen-accent);
+  transition-duration: 0.4s;
+}
+
+.item img {
+  border-radius: 8px;
+  max-width: 180px;
+}
+
+.item img:hover {
+  opacity: 80%;
+  transition-duration: 0.4s;
+}
+
+.icon img {
+  max-width: 27px;
+}
+
 @media screen and (max-width: 700px) {
   h1 {
     font-size: 1.6rem;
+  }
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+  }
+  .item img {
+    max-width: 90%;
   }
 }
